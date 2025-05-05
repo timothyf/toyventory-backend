@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 
 // Example route for future eBay integration
 app.get('/api/estimated-value', async (req, res) => {
+    console.log('Received request for estimated value');
   const { keyword } = req.query;
   if (!keyword) return res.status(400).json({ error: 'Keyword is required' });
 
